@@ -16,7 +16,9 @@ const port = process.env.PORT || 8000;
 // middleware function
 app.use(express.json());
 app.use(cookiParser());
-app.use(cors({credentials: true, origin: 'https://master--tourmaline-buttercream-89b5eb.netlify.app/'}));
+// app.use(cors({credentials: true, origin: 'https://master--tourmaline-buttercream-89b5eb.netlify.app/'}));
+app.use(cors());
+
 app.use(Event);
 app.use(Auth);
 app.use(express.urlencoded({ extended: true }));
